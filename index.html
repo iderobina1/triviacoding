@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/style.css" />
+  
+  <title>Trivia Coding</title>
+</head>
+
+<body>
+  <div class="scorecount"><a href="scores.html">Highscores</a></div> 
+  <div class="countdowntimer">Time: <span id="time">0</span></div>
+
+
+  <div class="container">
+    <div id="screen" class="start">
+      <h1>Answer to Win Knowledge</h1>
+      <p> 
+        Answer the following questions, remember you have a time limit. If you are wrong, you will be penalized 15 seconds! 
+      </p> 
+      <button id="start">Start Game</button>
+    </div>
+
+    <div id="questions" class="hide"> 
+      <h2 id="qtitle"></h2>
+      <div id="choices" class="choices"></div>
+      <p id="feedback"></p>
+      <p id="score">Score: <span id="scoreValue">0</span></p>
+    </div>
+
+    <div id="theend" class="hide">  
+      <h3>The End!</h3>
+      <p>Your score is <span id="finalscore"></span></p>
+      <p>
+        Enter your inistials: <input type="text" id="nameinitial" />
+        <button id="submit">Submit</button>
+      </p>
+      <button id="restart">Restart Game</button>
+    </div>
+  </div>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>

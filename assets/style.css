@@ -1,0 +1,68 @@
+* {
+  font-family: 'Gill Sans';
+  background-color: white;
+}
+
+a {
+  cursor: pointer;
+}
+
+.scorecount {
+  cursor: pointer;
+}
+
+#time {
+  margin-top: 0;
+}
+
+.container {
+  margin: 100px auto 0 auto;
+  max-width: 800px;
+  border: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.start {
+  text-align: center;
+}
+
+h1 {
+  display: block;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  border: dotted;
+  border-radius: 5%;
+  border-width: 5px;
+  padding-bottom: 10px;
+  color: blue;
+}
+
+p {
+  font-size: medium;
+  text-align: center;
+}
+
+button {
+  display: center;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 100%;
+  background-color: blue;
+  border-color: yellow;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 2px 10px;
+  color: white;
+  border: 0;
+}
+
+#questions {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
