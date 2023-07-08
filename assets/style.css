@@ -67,6 +67,7 @@ h1 {
   color: blue;
 }
 
+
 h1 {
   display: block;
  
@@ -82,6 +83,15 @@ p {
 
 }
 
+h3 {
+  display: block;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: blue;
+}
 button {
   display: center;
   margin: 30px;
