@@ -1,10 +1,9 @@
-// variables to keep track of quiz state
-var currentQuestion = 0;
 var time = 100;
 var score = 0;
 var timerId;
+var currentQuestion = 0;
 
-// variables to reference DOM elements
+
 var questions = document.getElementById('questions');
 var timer = document.getElementById('time');
 var scoreValue = document.getElementById('scoreValue');
@@ -53,30 +52,28 @@ function startQuiz() {
   var startScreen = document.getElementById('screen');
   startScreen.style.display = 'none';
 
-  // show questions section
   var questionsSection = document.getElementById('questions');
   questionsSection.style.display = 'block';
 
-  // start timer
+  // Reset current question
+  currentQuestion = 0;
+
   timerId = setInterval(clockTick, 1000);
 
-  // show starting time
   timer.textContent = time;
 
   getQuestion();
 }
 
+
 function getQuestion() {
   var currentQuestionData = questionsData[currentQuestion];
 
-  // update title with current question
   var titleEl = document.getElementById('qtitle');
   titleEl.textContent = currentQuestionData.title;
 
-  // clear out any old question choices
   choices.innerHTML = '';
 
-  // loop over choices
   for (var i = 0; i < currentQuestionData.choices.length; i++) {
     var choice = currentQuestionData.choices[i];
     var choiceNode = document.createElement('button');
@@ -85,7 +82,6 @@ function getQuestion() {
 
     choiceNode.textContent = i + 1 + '. ' + choice;
 
-    // display on the page
     choices.appendChild(choiceNode);
   }
 }
@@ -93,50 +89,42 @@ function getQuestion() {
 function questionClick(event) {
   var buttonEl = event.target;
 
-  // if the clicked element is not a choice button, do nothing.
   if (!buttonEl.matches('.choice')) {
     return;
   }
 
-  // check if user guessed wrong
   if (buttonEl.value !== questionsData[currentQuestion].answer) {
-    // penalize time
+
     time -= 15;
 
     if (time < 0) {
-      time = 0;
+      time = 0; time.setAttribute("style, color:red");
     }
 
-    // display new time on page
     timer.textContent = time;
 
-    // Provide feedback to the user
     var feedbackEl = document.getElementById('feedback');
     feedbackEl.textContent = 'Wrong!';
   } else {
     var feedbackEl = document.getElementById('feedback');
     feedbackEl.textContent = 'Correct!';
-    // increase score
+
     score += 10;
     scoreValue.textContent = score;
   }
 
-  // move to next question
   currentQuestion++;
 
-  // clear feedback message
   setTimeout(function () {
     feedbackEl.textContent = '';
-  }, 1000);
+  }, 1500);
 
-  // check if we've run out of questions
   if (currentQuestion === questionsData.length) {
     quizEnd();
   } else {
     getQuestion();
   }
 }
-
 function quizEnd() {
   // stop timer
   clearInterval(timerId);
@@ -150,8 +138,11 @@ function quizEnd() {
   finalScore.textContent = score;
 
   // hide questions section
-  questions.style.display = 'none';
+  var questionsSection = document.getElementById('questions');
+  questionsSection.style.display = 'none';
 }
+
+
 
 function clockTick() {
   // update time

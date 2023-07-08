@@ -1,18 +1,44 @@
 * {
   font-family: 'Gill Sans';
-  background-color: white;
 }
 
 a {
   cursor: pointer;
+  color: white;
 }
+
+.hidden {
+  display: none;
+}
+
 
 .scorecount {
   cursor: pointer;
+  color: white;
+  margin-left: -20px;
+  background-color:white;
+  align-items: center;
+  border-bottom: dashed;
+  border-color: blue;
+  border-width: 5px;
+  width: 80%;
+  margin-left: 100px;
+
 }
 
 #time {
   margin-top: 0;
+}
+
+.countdowntimer{
+  margin-left: 40px;
+  padding-bottom:  50px;
+  font-weight: bolder;
+  border-bottom: blue;
+  color: black;
+
+
+
 }
 
 .container {
@@ -21,6 +47,7 @@ a {
   border: solid;
   padding-left: 10px;
   padding-right: 10px;
+  align-items: ;
 }
 
 .start {
@@ -40,12 +67,34 @@ h1 {
   color: blue;
 }
 
+h1 {
+  display: block;
+ 
+ 
+}
+
 p {
   font-size: medium;
   text-align: center;
+  font-style:italic;
+  font-weight: bolder;
+  color: forestgreen;
+
 }
 
 button {
+  display: center;
+  margin: 30px;
+  cursor: pointer;
+  font-size: 100%;
+  background-color: blue;
+  border-radius: 5px;
+  padding: 2px 10px;
+  color: white;
+  border: 0;
+}
+
+.buttonend {
   display: center;
   margin: 5px;
   cursor: pointer;

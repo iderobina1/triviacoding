@@ -11,22 +11,24 @@
 </head>
 
 <body>
-  <div class="scorecount"><a href="scores.html">Highscores</a></div> 
-  <div class="countdowntimer">Time: <span id="time">0</span></div>
 
+  <div class="scorecount">
+    <button>
+      <a href="scores.html">Highscores</a>
+    </button>
+    <div class="countdowntimer">Time: <span id="time">0</span></div>
+  </div>
 
   <div class="container">
     <div id="screen" class="start">
       <h1>Answer to Win Knowledge</h1>
-      <p> 
-        Answer the following questions, remember you have a time limit. If you are wrong, you will be penalized 15 seconds! 
-      </p> 
+      <p>Answer the following questions, remember you have a time limit. If you are wrong, you will be penalized 15 seconds!</p>
       <button id="start">Start Game</button>
     </div>
 
-    <div id="questions" class="hide"> 
+    <div id="questions" class="hidden">
       <h2 id="qtitle"></h2>
-      <div id="choices" class="choices"></div>
+      <div id="choices"></div>
       <p id="feedback"></p>
       <p id="score">Score: <span id="scoreValue">0</span></p>
     </div>
@@ -34,11 +36,8 @@
     <div id="theend" class="hide">  
       <h3>The End!</h3>
       <p>Your score is <span id="finalscore"></span></p>
-      <p>
-        Enter your inistials: <input type="text" id="nameinitial" />
-        <button id="submit">Submit</button>
-      </p>
-      <button id="restart">Restart Game</button>
+      <p>Enter your initials: <input type="text" id="nameinitial" /><button id="submit">Submit</button></p>
+      <p><button id="restart">Restart Game</button></p>
     </div>
   </div>
 
